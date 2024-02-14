@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 
 aplicacao = Flask(__name__)
@@ -6,6 +6,6 @@ aplicacao = Flask(__name__)
 
 @aplicacao.route('/primeira-pagina')
 def Hello():
-       return '<h2>BEM VINDOS!!!! </h2>'
+       return render_template('index.html')
 
 aplicacao.run()
