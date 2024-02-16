@@ -8,17 +8,19 @@
 <body>
   <div class="container-list">
       <div class="container-header">
-         <h1>LIVROS</h1>
+         <h1>{{ tituloPaginaInicial }}</h1>
       </div>
       <table class="table">
          <thead class="thead-padrao">
-            <tr>
-               <th>Teste Livro de Matemática</th>
-            </tr>
-        </thead>
 
+         {%for sequenciaDeLivros in sequenciaDeLivros %}
            <tr>
-              <td>Teste Livro de História</td>
+              <td>{{ sequenciaDeLivros }}</td>
            </tr>
+         {%endfor%}
+
+         </thead>
+       </table>
+  </div>
 </body>
 </html>
